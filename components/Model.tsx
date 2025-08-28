@@ -8,7 +8,7 @@ import * as THREE from 'three';
 export default function Model({
     ref: containerRef,
 }: {
-    ref: React.RefObject<HTMLDivElement>;
+    ref: React.RefObject<THREE.Group<THREE.Object3DEventMap>>;
 }) {
     const ref = useRef<THREE.Group>(null);
     const { scene } = useGLTF('/model/cute_cyber_robot_character.glb'); // or your robot.glb
