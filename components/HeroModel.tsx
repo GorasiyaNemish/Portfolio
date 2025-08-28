@@ -4,8 +4,9 @@ import { Canvas } from '@react-three/fiber';
 import { Environment, Bounds } from '@react-three/drei';
 import React, { Suspense } from 'react';
 import Model from './Model';
+import * as THREE from 'three';
 
-export default function HeroModel({ ref }) {
+export default function HeroModel({ ref }: { ref: React.Ref<THREE.Group> }) {
     return (
         <div className="w-full h-full max-h-[500px] max-md:h-[300px] flex items-center justify-center">
             <Canvas
