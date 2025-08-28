@@ -103,7 +103,9 @@ const Navbar = () => {
                         <div
                             key={i}
                             className="flex-1 w-full bg-background-light origin-top scale-x-0"
-                            ref={(el) => (stripRefs.current[i] = el!)}
+                            ref={(el) => {
+                                stripRefs.current[i] = el!;
+                            }}
                         />
                     ))}
                 </div>

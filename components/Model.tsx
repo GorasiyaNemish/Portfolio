@@ -8,7 +8,7 @@ import * as THREE from 'three';
 export default function Model({
     ref: containerRef,
 }: {
-    ref: React.RefObject<THREE.Group<THREE.Object3DEventMap>>;
+    ref: React.RefObject<HTMLDivElement>;
 }) {
     const ref = useRef<THREE.Group>(null);
     const { scene } = useGLTF('/model/cute_cyber_robot_character.glb'); // or your robot.glb
@@ -37,12 +37,17 @@ export default function Model({
             });
         };
 
-        containerRef.current.addEventListener('mousemove', handleMouseMove);
-        return () =>
-            containerRef.current.removeEventListener(
-                'mousemove',
-                handleMouseMove,
-            );
+        if (containerRef.current) {
+            containerRef.current.addEventListener('mousemove', handleMouseMove);
+        }
+        return () => {
+            if (containerRef.current) {
+                containerRef.current.removeEventListener(
+                    'mousemove',
+                    handleMouseMove,
+                );
+            }
+        };
     }, []);
 
     return (
