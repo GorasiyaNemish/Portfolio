@@ -7,24 +7,30 @@ import * as THREE from 'three';
 
 export default function Model({
     ref: containerRef,
+    rotation,
 }: {
     ref: React.RefObject<HTMLDivElement>;
+    rotation?: [number, number, number];
 }) {
     const ref = useRef<THREE.Group>(null);
     const { scene } = useGLTF('/model/cute_cyber_robot_character.glb'); // or your robot.glb
     const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
-    // Update rotation based on cursor
     useFrame(() => {
         if (ref.current) {
-            const targetRotationX = (mouse.y - 0.6) * 0.8; // up/down tilt
-            const targetRotationY = (mouse.x - 1) * 1.2; // left/right turn
+            if (rotation) {
+                ref.current.rotation.x = rotation[0];
+                ref.current.rotation.y = rotation[1];
+                ref.current.rotation.z = rotation[2];
+            } else {
+                const targetRotationX = (mouse.y - 0.6) * 0.8;
+                const targetRotationY = (mouse.x - 1) * 1.2;
 
-            // Smooth easing
-            ref.current.rotation.x +=
-                (targetRotationX - ref.current.rotation.x) * 0.1;
-            ref.current.rotation.y +=
-                (targetRotationY - ref.current.rotation.y) * 0.1;
+                ref.current.rotation.x +=
+                    (targetRotationX - ref.current.rotation.x) * 0.1;
+                ref.current.rotation.y +=
+                    (targetRotationY - ref.current.rotation.y) * 0.1;
+            }
         }
     });
 

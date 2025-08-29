@@ -38,7 +38,7 @@ const Banner = () => {
             className="relative overflow-hidden"
             id="banner"
         >
-            <div className="container h-[100svh] min-h-[530px] flex justify-between items-center max-md:flex-col max-md:pb-10">
+            <div className="container h-[100svh] min-h-[530px] flex justify-between items-center max-md:flex-col max-md:pt-10 max-md:pb-10">
                 <div className="w-1/2 max-md:w-full max-md:mb-10 flex flex-col justify-center items-start max-w-[544px]">
                     <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
                         <span className="text-primary">FULL STACK</span>
@@ -56,12 +56,17 @@ const Banner = () => {
                         high-performance, scalable, and responsive web
                         solutions.
                     </p>
-                    <Button
-                        variant="primary"
+                    <a
+                        href="/pdf/Nemish Gorasiya Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="mt-9 banner-button slide-up-and-fade"
+                        style={{ display: 'inline-block' }}
                     >
-                        Resume
-                    </Button>
+                        <Button as="button" variant="primary">
+                            Resume
+                        </Button>
+                    </a>
                 </div>
 
                 <div className="w-1/2 max-md:w-full h-full flex items-center justify-center">

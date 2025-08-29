@@ -32,7 +32,6 @@ const Navbar = () => {
     useLayoutEffect(() => {
         if (isMenuOpen) {
             gsap.set(stripRefs.current, { scaleX: 0 });
-
             gsap.to(stripRefs.current, {
                 scaleX: 1,
                 transformOrigin: 'right',
@@ -40,6 +39,7 @@ const Navbar = () => {
                 stagger: 0.1,
                 ease: 'power2.out',
             });
+            document.body.style.overflow = 'hidden';
         } else {
             gsap.to(stripRefs.current, {
                 scaleX: 0,
@@ -47,7 +47,11 @@ const Navbar = () => {
                 duration: 0.2,
                 ease: 'power2.in',
             });
+            document.body.style.overflow = '';
         }
+        return () => {
+            document.body.style.overflow = '';
+        };
     }, [isMenuOpen]);
 
     return (

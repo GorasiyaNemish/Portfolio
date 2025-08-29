@@ -7,7 +7,7 @@ import Education from './_components/Education';
 
 export default function Home() {
     return (
-        <div className="page-">
+        <div>
             <Banner />
             <AboutMe />
             <Skills />
