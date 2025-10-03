@@ -32,6 +32,16 @@ const Banner = () => {
         { scope: containerRef },
     );
 
+    const joiningDate = new Date('2024-01-01');
+    const today = new Date();
+
+    const diffInMonths =
+        (today.getFullYear() - joiningDate.getFullYear()) * 12 +
+        (today.getMonth() - joiningDate.getMonth());
+
+    const years = Math.floor(diffInMonths / 12);
+    const months = diffInMonths % 12;
+
     return (
         <section
             ref={containerRef}
@@ -52,11 +62,14 @@ const Banner = () => {
                             </span>
                         </span>
                         . A creative Fullstack Developer specialized in frontend
-                        with 1.5+ years of experience in building
-                        high-performance, scalable, and responsive web
-                        solutions.
+                        with{' '}
+                        {`${years} year${years > 1 ? 's' : ''} ${months} month${
+                            months > 1 ? 's' : ''
+                        }`}{' '}
+                        of experience in building high-performance, scalable,
+                        and responsive web solutions.
                     </p>
-                    <a
+                    {/* <a
                         href="/pdf/Nemish Gorasiya Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -66,7 +79,7 @@ const Banner = () => {
                         <Button as="button" variant="primary">
                             Resume
                         </Button>
-                    </a>
+                    </a> */}
                 </div>
 
                 <div className="w-1/2 max-md:w-full h-full flex items-center justify-center">
