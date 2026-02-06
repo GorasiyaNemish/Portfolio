@@ -102,20 +102,77 @@ export const MY_STACK = {
 
 export const PROJECTS: IProject[] = [
     {
+        title: 'InkSync',
+        slug: 'inksync',
+        liveUrl: 'https://inksync-b7pn.onrender.com/',
+        year: 2025,
+        description: `
+    InkSync is a real-time collaborative whiteboard application that allows multiple users to draw, write and brainstorm together instantly — without requiring login. <br/><br/>
+
+    Designed for seamless collaboration, InkSync enables users to create or join a shared whiteboard via a unique link or QR code, making it ideal for quick discussions, teaching and remote teamwork. <br/><br/>
+
+    Key Features:<br/>
+    <ul>
+      <li>🖊️ Real-time Drawing: Live pen, shapes and text syncing across all connected users</li>
+      <li>🧑‍🤝‍🧑 Active Users Panel: Displays currently connected collaborators in real time</li>
+      <li>🔗 Shareable Boards: Join boards instantly via link or QR code</li>
+      <li>✍️ Text Tool: Click anywhere on the canvas to add editable text</li>
+      <li>🎨 Tool Palette: Central toolbar for color, pen, shape and text selection</li>
+      <li>🚫 No Login Required: Lightweight username-based presence system</li>
+      <li>📱 Responsive Canvas: Works smoothly across desktop and tablet screens</li>
+    </ul><br/>
+
+    Technical Highlights:
+    <ul>
+      <li>Socket.IO powered real-time bi-directional communication</li>
+      <li>Monorepo architecture using pnpm workspaces</li>
+      <li>Canvas rendering using React Konva for high-performance drawing</li>
+      <li>Username persistence using localStorage</li>
+      <li>Board state synchronization for late-joining users</li>
+    </ul>
+  `,
+        role: `
+    Full Stack Developer <br/>
+    Led the complete development of InkSync from concept to deployment:
+    <ul>
+      <li>🎨 UI/UX: Designed a clean, modern whiteboard interface using Tailwind CSS</li>
+      <li>🖌️ Canvas Logic: Implemented drawing, shapes and text tools using React Konva</li>
+      <li>📡 Real-time Sync: Built WebSocket-based collaboration with Socket.IO</li>
+      <li>👥 Presence System: Managed active users and duplicate username handling</li>
+      <li>🏗️ Architecture: Structured the project as a scalable monorepo</li>
+      <li>🐳 Deployment: Dockerized the backend and prepared the app for cloud hosting</li>
+    </ul>
+  `,
+        techStack: [
+            'React.js',
+            'TypeScript',
+            'Tailwind CSS',
+            'Socket.IO',
+            'React Konva',
+            'Node.js',
+            'Express.js',
+            'pnpm Workspaces',
+            'Docker',
+        ],
+        thumbnail: '/projects/thumbnail/inksync.png',
+        longThumbnail: '/projects/long/inksync.png',
+        images: ['/projects/images/inksync-1.png'],
+    },
+    {
         title: 'YouTube Clone',
         slug: 'youtube-clone',
         liveUrl: 'https://clone-youtube-reactjs.netlify.app/',
         year: 2024,
         description: `
-    A fully functional YouTube clone that replicates the core features of YouTube including video playback, search, channel browsing, and more. <br/><br/>
+    A fully functional YouTube clone that replicates the core features of YouTube including video playback, search, channel browsing and more. <br/><br/>
 
     Key Features:<br/>
     <ul>
       <li>🔍 Video Search: Real-time search using YouTube Data API v3</li>
       <li>📺 Video Playback: Embedded player with full-screen and resolution controls</li>
-      <li>👤 Channel View: View channel details, video listings, and subscribe option</li>
+      <li>👤 Channel View: View channel details, video listings and subscribe option</li>
       <li>🌐 Google OAuth: Secure login using Google account</li>
-      <li>📱 Responsive UI: Optimized layout for mobile, tablet, and desktop</li>
+      <li>📱 Responsive UI: Optimized layout for mobile, tablet and desktop</li>
     </ul><br/>
 
     Technical Highlights:
@@ -169,7 +226,7 @@ export const PROJECTS: IProject[] = [
       <li>👍 Liked Videos: Keep track of user likes for tailored content</li>
       <li>⭐ Movie Rating: Rate movies and persist user preferences</li>
       <li>🔎 Category-Based Search: Find movies by genres and keywords</li>
-      <li>📱 Fully Responsive: Smooth UI across mobile, tablet, and desktop</li>
+      <li>📱 Fully Responsive: Smooth UI across mobile, tablet and desktop</li>
     </ul><br/>
 
     Technical Highlights:
@@ -186,7 +243,7 @@ export const PROJECTS: IProject[] = [
     <ul>
       <li>🛠️ Frontend: Developed UI with ReactJS and SCSS, ensuring visual consistency</li>
       <li>🔐 Auth: Integrated secure authentication flow</li>
-      <li>🎯 User Experience: Implemented wishlist, likes, and movie rating functionality</li>
+      <li>🎯 User Experience: Implemented wishlist, likes and movie rating functionality</li>
       <li>🧠 State Logic: Managed client-side state using React hooks</li>
       <li>🗂️ API Integration: Used TMDB API to fetch real-time data</li>
       <li>🚀 Deployment: Deployed on Vercel for fast, global access</li>
@@ -203,12 +260,12 @@ export const PROJECTS: IProject[] = [
         liveUrl: 'https://college-management.onrender.com/',
         year: 2024,
         description: `
-        A robust web-based platform designed to streamline college operations across different user roles — Admin, Faculty, and Students. This system handles the entire lifecycle of academic and administrative tasks from event creation to result distribution.<br/><br/>
+        A robust web-based platform designed to streamline college operations across different user roles — Admin, Faculty and Students. This system handles the entire lifecycle of academic and administrative tasks from event creation to result distribution.<br/><br/>
 
         Key Features:<br/>
         <ul>
-          <li>👥 Role-Based Access: Distinct dashboards and permissions for Admin, Faculty, and Students</li>
-          <li>📅 Event & Exam Management: Create, update, and view college events and exam schedules</li>
+          <li>👥 Role-Based Access: Distinct dashboards and permissions for Admin, Faculty and Students</li>
+          <li>📅 Event & Exam Management: Create, update and view college events and exam schedules</li>
           <li>📝 Assignments & Attendance: Faculty can upload assignments and mark attendance</li>
           <li>📊 Results & Reports: Automated results upload and individual performance view for students</li>
           <li>📰 News Bulletin: Institution-wide announcements and updates</li>
@@ -229,7 +286,7 @@ export const PROJECTS: IProject[] = [
         <ul>
           <li>🛠️ Backend: Developed REST APIs with Node.js and Express for CRUD operations</li>
           <li>🔐 Auth & Access: Implemented secure login and role-based routing</li>
-          <li>🎨 Frontend: Created responsive UI using ReactJS, SCSS, and Material UI</li>
+          <li>🎨 Frontend: Created responsive UI using ReactJS, SCSS and Material UI</li>
           <li>📦 Media Integration: Used Cloudinary for file uploads</li>
           <li>⚡ Caching: Used Redis for session/token management and data caching</li>
           <li>🚀 Deployment: Deployed frontend and backend for real-time access</li>
@@ -283,7 +340,7 @@ export const PROJECTS: IProject[] = [
     <ul>
       <li>🖌️ Layout & Styling: Developed static structure with HTML and responsive styling with CSS</li>
       <li>🎯 Animations: Integrated scroll-based animations with Locomotive.js</li>
-      <li>📏 Design Accuracy: Ensured fidelity to the original site’s typography, spacing, and rhythm</li>
+      <li>📏 Design Accuracy: Ensured fidelity to the original site’s typography, spacing and rhythm</li>
       <li>⚙️ Deployment: Hosted on Github pages for fast load times and easy sharing</li>
     </ul>
   `,

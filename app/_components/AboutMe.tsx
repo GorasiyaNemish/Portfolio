@@ -55,7 +55,7 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade font-caveat-brush">
-                    Blending code, creativity, and AI to craft smarter web
+                    Blending code, creativity and AI to craft smarter web
                     experiences
                 </h2>
 
@@ -75,7 +75,7 @@ const AboutMe = () => {
                                 combining modern web technologies with
                                 AI-assisted workflows, I create interfaces that
                                 are not just responsive and performant—but
-                                adaptive, dynamic, and future-ready
+                                adaptive, dynamic and future-ready
                             </p>
                         </div>
                     </div>
