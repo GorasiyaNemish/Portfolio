@@ -20,7 +20,7 @@
         "html-react-parser": "^5.2.3",
         "lenis": "^1.1.16",
         "lucide-react": "^0.460.0",
-        "next": "15.2.0",
+        "next": "15.2.8",
         "react": "19.1.1",
         "react-dom": "19.1.1",
         "tailwind-merge": "^2.5.4",

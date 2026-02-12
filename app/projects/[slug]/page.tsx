@@ -25,10 +25,8 @@ export const generateMetadata = async ({
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
-    console.log('slug', slug);
 
     const project = PROJECTS.find((project) => project.slug === slug);
-    console.log('project', project);
 
     if (!project) {
         return notFound();
