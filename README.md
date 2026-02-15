@@ -4,7 +4,7 @@
 
 Hi, I'm **Nemish Gorasiya**, a passionate software engineer and specialize in building **AI-driven, engaging, fast and scalable** web applications. This portfolio showcases my journey, projects and technical skills.
 
-## 🛠 Installation & Set Up
+## 🛠 Installation & Set Up Guide
 
 First, run the development server:
 
